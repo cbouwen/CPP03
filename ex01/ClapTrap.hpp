@@ -6,7 +6,7 @@
 
 class ClapTrap
 {
-    private:
+    protected:
         std::string  _name;
         int         _hitPoints;
         int         _energyPoints;
@@ -21,7 +21,7 @@ class ClapTrap
         ClapTrap(const ClapTrap& other);
 
         //Destructor
-        ~ClapTrap();
+        virtual ~ClapTrap();
 
         //Copy assignment operator
         ClapTrap& operator=(const ClapTrap& other);
