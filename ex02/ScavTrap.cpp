@@ -40,7 +40,7 @@ ScavTrap&   ScavTrap::operator=(const ScavTrap &other)
 
 //Functions
 
-void    ClapTrap::attack(const std::string& target)
+void    ScavTrap::attack(const std::string& target)
 {
     if ( _hitPoints > 0)
     {

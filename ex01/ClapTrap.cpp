@@ -77,16 +77,8 @@ void    ClapTrap::beRepaired(unsigned int amount)
         if (_energyPoints > 0)
         {
             _energyPoints--;
-            if (_hitPoints + amount > 10)
-            {
-                _hitPoints = 10;
-                std::cout << "Claptrap" << _name << " is fully healed!";
-            }
-            else
-            {
-                _hitPoints += amount;
-                std::cout << "Claptrap " << _name << " repaired himself for " << amount << " hitpoints!" << std::endl;
-            }
+            _hitPoints += amount;
+            std::cout << "Claptrap " << _name << " repaired himself for " << amount << " hitpoints!" << std::endl;
         }
         else
             std::cout << "Claptrap " << _name << " has ran out of energy!" << std::endl;
