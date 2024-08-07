@@ -40,15 +40,20 @@ ScavTrap&   ScavTrap::operator=(const ScavTrap &other)
 
 //Functions
 
-void    ScavTrap::attack(const std::string& target)
+void    ClapTrap::attack(const std::string& target)
 {
-    if (_energyPoints > 0)
+    if ( _hitPoints > 0)
     {
-        _energyPoints--;
-        std::cout << "ScavTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;      
+        if (_energyPoints > 0)
+        {
+            _energyPoints--;
+            std::cout << "Scavtrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;      
+        }
+        else
+            std::cout << "Scavtrap " << _name << " has ran out of energy!" << std::endl;
     }
     else
-        std::cout << "ScavTrap " << _name << " has ran out of energy!" << std::endl;
+        std::cout << "Scavtrap " << _name << " has no more hitpoints left! He can't do anything.." << std::endl;
 }
 
 void    ScavTrap::guardGate()
